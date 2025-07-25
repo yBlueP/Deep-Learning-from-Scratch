@@ -18,7 +18,7 @@ def test_sigmoid():
 
 def test_ReLU():
     assert np.all(
-        f.ReLU(np.array([-1.0, 1.0, 2.0])) == np.array([0.0, 1.0, 2.0]),
+        f.relu(np.array([-1.0, 1.0, 2.0])) == np.array([0.0, 1.0, 2.0]),
     )
 
 def test_softmax():

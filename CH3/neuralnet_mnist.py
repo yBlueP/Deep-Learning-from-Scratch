@@ -19,8 +19,11 @@ def get_data():
 class MnistNeuralNet:
     def __init__(self):
         # structure
-        self.layer1 = L.LinearLayer(784, 50)
-        self.layer2 = L.LinearLayer(50, 100)
+        # First layer with Sigmoid activation
+        self.layer1 = L.LinearLayer(784, 50, activation = L.Sigmoid())
+        # Second layer with Sigmoid activation
+        self.layer2 = L.LinearLayer(50, 100, activation = L.Sigmoid())
+        # Output layer with identity activation
         self.layer3 = L.LinearLayer(100, 10, activation = F.identity_function)
 
         self.params = init_network()
